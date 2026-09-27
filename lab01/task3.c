@@ -1,28 +1,29 @@
 #include <stdio.h>
 
 int main(void) {
-    double R1, R2, Req;
+    double r1, r2;
+    double req;
 
-    printf("Enter resistance R1 (Ohm): ");
-    if (scanf("%lf", &R1) != 1) {
-        printf("Input error!\n");
+    printf("Enter R1 (Ohm): ");
+    if (scanf("%lf", &r1) != 1) {
+        printf("Invalid input.\n");
         return 1;
     }
 
-    printf("Enter resistance R2 (Ohm): ");
-    if (scanf("%lf", &R2) != 1) {
-        printf("Input error!\n");
+    printf("Enter R2 (Ohm): ");
+    if (scanf("%lf", &r2) != 1) {
+        printf("Invalid input.\n");
         return 1;
     }
 
-    if (R1 <= 0 || R2 <= 0) {
-        printf("Resistance must be greater than zero!\n");
+    if (r1 <= 0 || r2 <= 0) {
+        printf("Resistance must be greater than zero.\n");
         return 1;
     }
 
-    Req = (R1 * R2) / (R1 + R2);
+    req = (r1 * r2) / (r1 + r2);
 
-    printf("Equivalent resistance: %.2f Ohm\n", Req);
+    printf("Equivalent resistance: %.2f Ohm\n", req);
 
     return 0;
 }
